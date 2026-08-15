@@ -1,0 +1,12 @@
+# Dependencias
+/vendor/
+node_modules/
+
+# Artefactos de IDE / SO
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs
+*.log

@@ -1,0 +1,527 @@
+/**
+ * WP Real Estate - Estilos de administración.
+ *
+ * @package WPRealEstate
+ */
+
+/* ==========================================================================
+   Campos personalizados (meta boxes)
+   ========================================================================== */
+
+.wpre-fields__group {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.wpre-fields__group-title {
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #1d2327;
+}
+
+.wpre-fields__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.wpre-field label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #50575e;
+}
+
+.wpre-field input,
+.wpre-field select {
+    width: 100%;
+}
+
+.wpre-field--gallery,
+.wpre-field--file {
+    grid-column: 1 / -1;
+}
+
+/* ==========================================================================
+   Galería
+   ========================================================================== */
+
+.wpre-gallery__preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.wpre-gallery__item {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.wpre-gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wpre-gallery__remove {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    padding: 0;
+}
+
+.wpre-gallery__remove:hover {
+    background: #d63638;
+}
+
+/* ==========================================================================
+   Carga de archivo
+   ========================================================================== */
+
+.wpre-file {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wpre-file__name {
+    color: #50575e;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   Panel principal
+   ========================================================================== */
+
+.wpre-dashboard__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.wpre-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.wpre-card h3 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: #50575e;
+}
+
+.wpre-card__number {
+    display: block;
+    font-size: 36px;
+    font-weight: 600;
+    color: #1d2327;
+    margin-bottom: 8px;
+}
+
+.wpre-card a {
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.wpre-dashboard__links {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.wpre-dashboard__links h3 {
+    margin: 0 0 12px;
+}
+
+.wpre-dashboard__links ul {
+    margin: 0;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.wpre-dashboard__links li {
+    margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   Badges de disponibilidad
+   ========================================================================== */
+
+.wpre-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.wpre-badge--success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.wpre-badge--warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.wpre-badge--info {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.wpre-badge--danger {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.wpre-badge--default {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+/* ==========================================================================
+   Herramientas
+   ========================================================================== */
+
+.wpre-tools__section {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.wpre-tools__status {
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: #f0f0f1;
+    margin: 12px 0;
+}
+
+.wpre-tools__status--active {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* ---------- Panel de generación ---------- */
+
+#wpre-demo-panel {
+    margin-top: 16px;
+}
+
+.wpre-demo-panel__layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 20px;
+    margin-top: 12px;
+}
+
+@media (max-width: 782px) {
+    .wpre-demo-panel__layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Barra de progreso ---------- */
+
+.wpre-progress {
+    margin-bottom: 16px;
+}
+
+.wpre-progress__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+#wpre-progress-status {
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.wpre-progress-status--error {
+    color: #d63638 !important;
+}
+
+#wpre-progress-percent {
+    color: #50575e;
+    font-variant-numeric: tabular-nums;
+}
+
+.wpre-progress__bar {
+    height: 24px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+#wpre-progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2271b1, #135e96);
+    border-radius: 12px;
+    transition: width 0.4s ease;
+    min-width: 0;
+}
+
+/* ---------- Lista de pasos ---------- */
+
+#wpre-step-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wpre-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 12px;
+    color: #999;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.wpre-step:last-child {
+    border-bottom: none;
+}
+
+.wpre-step__icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+    border: 2px solid #ddd;
+    background: #fff;
+}
+
+.wpre-step--active {
+    color: #1d2327;
+    font-weight: 600;
+}
+
+.wpre-step--active .wpre-step__icon {
+    border-color: #2271b1;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(34, 113, 177, 0.15);
+}
+
+.wpre-step--active .wpre-step__icon::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #2271b1;
+    border-radius: 50%;
+    animation: wpre-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes wpre-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+}
+
+.wpre-step--done {
+    color: #00a32a;
+}
+
+.wpre-step--done .wpre-step__icon {
+    border-color: #00a32a;
+    background: #00a32a;
+    color: #fff;
+}
+
+.wpre-step--done .wpre-step__icon::after {
+    content: '\2713';
+}
+
+/* ---------- Registro de actividad ---------- */
+
+#wpre-demo-log {
+    max-height: 360px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: #f9f9f9;
+    padding: 12px;
+}
+
+.wpre-log-entry {
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    background: #fff;
+    border-left: 3px solid #ddd;
+}
+
+.wpre-log-entry:last-child {
+    margin-bottom: 0;
+}
+
+.wpre-log-entry--success {
+    border-left-color: #00a32a;
+}
+
+.wpre-log-entry--error {
+    border-left-color: #d63638;
+    background: #fcf0f1;
+}
+
+.wpre-log-entry__icon {
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.wpre-log-entry--success .wpre-log-entry__icon {
+    color: #00a32a;
+}
+
+.wpre-log-entry--error .wpre-log-entry__icon {
+    color: #d63638;
+}
+
+.wpre-log-entry__text {
+    font-weight: 600;
+}
+
+.wpre-log-entry__details {
+    margin: 6px 0 0 22px;
+    padding: 0;
+    list-style: disc;
+    font-size: 12px;
+    color: #50575e;
+    font-weight: 400;
+}
+
+.wpre-log-entry__details li {
+    margin-bottom: 2px;
+}
+
+/* ---------- Finalización ---------- */
+
+#wpre-demo-complete {
+    margin-top: 16px;
+    padding: 16px 20px;
+    background: #d4edda;
+    border: 1px solid #b7dfc4;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wpre-demo-complete__icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.wpre-demo-complete__text {
+    font-size: 14px;
+    color: #155724;
+    font-weight: 500;
+    flex: 1;
+}
+
+/* ---------- Reintento ---------- */
+
+#wpre-demo-retry {
+    margin-top: 12px;
+    padding: 12px 16px;
+    background: #fcf0f1;
+    border: 1px solid #f0c4c4;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   Miniaturas en listados
+   ========================================================================== */
+
+.wpre-column-thumb {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.wpre-column-thumb--round {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.wpre-column-thumb--empty {
+    background: #f0f0f1;
+    color: #a7aaad;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+}
+
+.wpre-column-thumb--round.wpre-column-thumb--empty {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.column-wpre_thumbnail,
+.column-wpre_agent_photo {
+    width: 70px;
+}
+
+/* ==========================================================================
+   Campo de imagen (Ajustes)
+   ========================================================================== */
+
+.wpre-media-field {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.wpre-media-preview {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   Pestañas de ajustes
+   ========================================================================== */
+
+.nav-tab-wrapper {
+    margin-bottom: 16px;
+}
